@@ -6,6 +6,7 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+ 
 }
 
 #container strong {
@@ -27,5 +28,11 @@
 }
 
 ion-content ion-toolbar {
-  --background: translucent;
+  --background: dark;
 }
+
+ion-title.large-title {
+  color: purple;
+  font-size: 30px;
+}
+

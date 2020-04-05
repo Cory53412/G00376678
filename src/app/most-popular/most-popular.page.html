@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Most Popular</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: blue;">
+  <ul>
+    <li *ngFor = "let x of TVShowData">
+      <h2>{{x.Title}}</h2>
+      <p>{{x.Year}}</p>
+      <img src = "{{x.Poster}}">
+    </li>
+  </ul>
+</ion-content>
