@@ -3,17 +3,18 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>movies</ion-title>
+    <ion-title>Top 5 movies of 2019</ion-title>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
-<ul>
-  <li *ngFor = "let x of movieData">
-    <h2>{{x.Title}}</h2>
-    <p>{{x.Year}}</p>
-    <img src = "{{x.Poster}}">
+  <ul>
+  <li *ngFor = "let z of movieData">
+    <h2>{{z.Title}}</h2>
+    <p>{{z.Year}}</p>
+    <p>{{z.Plot}}</p>
+    <img src = "{{z.Poster}}">
   </li>
 </ul>
-
 </ion-content>

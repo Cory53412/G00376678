@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component , OnInit} from '@angular/core';
+import {Storage} from '@ionic/storage'
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,22 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+ userStatus:string;
+  constructor(private storage : Storage) {}
 
-  constructor() {}
 
+
+  ngOnInit(){
+    this.storage.get("feedback").then(
+      (data)=>{
+        this.userStatus = data;
+      }
+    ).catch(
+      (error)=>{
+        console.log(error);
+      }
+    );
+
+    
+  }
 }

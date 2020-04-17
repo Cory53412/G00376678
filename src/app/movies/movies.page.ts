@@ -6,11 +6,11 @@ import { RemoteService } from "../Services/remote.service";
   styleUrls: ['./movies.page.scss'],
 })
 export class MoviesPage implements OnInit {
-movieData:any[];
+movieData:any = [];
   constructor(private movieService: RemoteService ) { }
 
-  ngOnInit() {
-    this.movieService.getMovieData().subscribe(
+  ngOnInit() :void{
+    this.movieService.getThisYearData().subscribe(
       (data)=>{
           this.movieData=data.Search;
       }

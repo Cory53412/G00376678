@@ -5,13 +5,15 @@
 <ion-content [fullscreen]="true" style="--background: yellow;">
   <ul>
     <ion-button  shape=“round” color="dark" expand="block" [routerLink]="['/movies']"
-    >war Movies</ion-button>
+    >Top 5 movies of 2019</ion-button>
     <br>
     <ion-button   shape=“round” color="dark" expand="block" [routerLink]="['/most-popular']"
-    >Most Popular Movies</ion-button>
+    >Top 5 movies of the decade</ion-button>
     <br>
     <ion-button   shape=“round” color="dark" expand="block" [routerLink]="['/feedback']"
     >Give us your feedback</ion-button>
+
+    <h1>{{userFeedback}}</h1>
 
   </ul>
 

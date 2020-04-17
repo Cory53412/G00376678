@@ -11,21 +11,15 @@ export class FeedbackPage implements OnInit {
   constructor(private storage:Storage) { }
 
   ngOnInit() {
-   this.storage.get("feedback").then(
-     (data)=>{
-       this.userFeedback = data;
-     }
-   ).catch(
-     (error)=>{
-        console.log(error);
-     }
-   )
+ 
    
   }
 
   onSave(){
     console.log(this.userFeedback);
     this.storage.set("feedback",this.userFeedback);
+
   }
+
 
 }

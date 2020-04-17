@@ -7,13 +7,13 @@ import { RemoteService } from "../Services/remote.service";
   styleUrls: ['./most-popular.page.scss'],
 })
 export class MostPopularPage implements OnInit {
-  TVShowData:any[];
+  decadeData:any[];
   constructor(private movieService: RemoteService) { }
 
   ngOnInit() {
-    this.movieService.getTVShowData().subscribe(
+    this.movieService.getDecadeData().subscribe(
       (data)=>{
-          this.TVShowData=data.Search;
+          this.decadeData=data.Search;
       }
     );
   }
