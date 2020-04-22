@@ -1,18 +1,25 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Most Popular</ion-title>
+    <ion-title>Top 5 Movies This Decade </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content style="--background: blue;">
-  <ul>
-    <li *ngFor = "let x of decadeData">
-      <h2>{{x.Title}}</h2>
-      <p>{{x.Year}}</p>
-      <img src = "{{x.Poster}}">
-    </li>
-  </ul>
+<ion-content style="--background: black;">
+  <!--Two way data binding-->
+  <!--looping through data retrieved from getDecadeData()-->
+  <ion-card color="danger" *ngFor="let x of decadeData">
+    <ion-card-header>
+      <ion-card-title>Title : {{x.Title}}</ion-card-title>
+      <ion-card-subtitle>Year: {{x.Year}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      {{x.Plot}}
+    </ion-card-content>
+    <div style="width:50%; text-align:center">
+      <img src="{{x.Poster}}" style="width:50%; height:50%;" />
+    </div>
+  </ion-card>
 </ion-content>

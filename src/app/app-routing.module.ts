@@ -16,6 +16,10 @@ const routes: Routes = [
     path: 'feedback',
     loadChildren: () => import('./feedback/feedback.module').then( m => m.FeedbackPageModule)
   },
+  {
+    path: 'plugin',
+    loadChildren: () => import('./plugin/plugin.module').then( m => m.PluginPageModule)
+  },
 ];
 
 @NgModule({

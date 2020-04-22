@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -7,34 +7,34 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content  >
+<ion-content style="--background: brown;">
 
   <ion-list>
-    <ion-radio-group [(ngModel)]="userFeedback">
+    <ion-radio-group [(ngModel)]="userFeedback" >
       <ion-list-header>
-        <ion-label size = "large">
+        <h5><!--Data Persistance. Shows user input here once it has been saved-->
           How was your user experience: {{userFeedback}}
-        </ion-label>
+        </h5>
       </ion-list-header>
-  
+
       <ion-item>
         <ion-label>Poor</ion-label>
         <ion-radio value="Poor"></ion-radio>
       </ion-item>
-  
+
       <ion-item>
         <ion-label>Good</ion-label>
         <ion-radio value="Good"></ion-radio>
       </ion-item>
-  
+
       <ion-item>
         <ion-label>Very Good</ion-label>
         <ion-radio value="Very Good"></ion-radio>
       </ion-item>
-      </ion-radio-group>
+    </ion-radio-group>
   </ion-list>
- 
-<ion-button (click)= "onSave()"> Save</ion-button>
-  
+<!--Save users input & bring user back to home page-->
+  <ion-button (click)="onSave()" [routerLink]="['/home']" shape=“round” color="dark" expand="block"> Save</ion-button>
+
 
 </ion-content>

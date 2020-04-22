@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>plugin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: brown;">
+  <!--On the click of this bottom display Co-Ordinates-->
+  <ion-button (click)="geoFinder()" shape=“round” color="dark" expand="block">
+    <ion-icon name="navigate-outline"></ion-icon>
+    Co-ordinate Finder
+  </ion-button>
+  <h2>LATITUDE: {{latitude}}</h2>
+  <h2>LONGITUDE:{{longitude}}</h2>
+  <br>
+
+  <!-- On click of this button enable background mode-->
+  <ion-button (click)="bgMode()" shape=“round” color="dark" expand="block">BackGround Mode</ion-button>
+</ion-content>

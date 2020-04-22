@@ -7,13 +7,13 @@ import { RemoteService } from "../Services/remote.service";
   styleUrls: ['./most-popular.page.scss'],
 })
 export class MostPopularPage implements OnInit {
-  decadeData:any[];
+  decadeData:any[];//variable to store data read from services method.
   constructor(private movieService: RemoteService) { }
 
   ngOnInit() {
     this.movieService.getDecadeData().subscribe(
       (data)=>{
-          this.decadeData=data.Search;
+          this.decadeData=data.Search;//assigning variable to json data
       }
     );
   }

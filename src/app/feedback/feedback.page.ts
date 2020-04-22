@@ -7,18 +7,16 @@ import { Storage } from "@ionic/storage";
   styleUrls: ['./feedback.page.scss'],
 })
 export class FeedbackPage implements OnInit {
+  //variable
   userFeedback : String;
   constructor(private storage:Storage) { }
 
   ngOnInit() {
- 
-   
   }
 
-  onSave(){
+  onSave(){//on the click of this button save data to variable userFeedback
     console.log(this.userFeedback);
     this.storage.set("feedback",this.userFeedback);
-
   }
 
 
